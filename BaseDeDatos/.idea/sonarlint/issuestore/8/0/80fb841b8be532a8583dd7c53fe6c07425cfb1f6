@@ -1,0 +1,8 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¦±áÿÿÿÿÿ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(¸˜±·ûÿÿÿÿ
+Z	java:S106E"9Replace this use of System.out or System.err by a logger.(¿Ğ¨¹ıÿÿÿÿ8ÖÌºÓ0
+€
+java:S1488"eImmediately return this expression instead of assigning it to the temporary variable "connectionUrl".(˜«ìœûÿÿÿÿ
+0
+java:S1220""Move this file to a named package.

@@ -1,0 +1,6 @@
+{
+  "Content-Type": "application/json",
+  "Accept": "application/json",
+  "Cookie": "token=<token_value>",
+  "Authorization": "Basic"
+}

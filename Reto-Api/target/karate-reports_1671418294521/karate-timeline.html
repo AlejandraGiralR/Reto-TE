@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/resources\/co.com.tevolvers.certification.api\/karate\/createBooking\/create[2.1:44]","start":1671418055686,"end":1671418057075,"title":"src\/test\/resources\/co.com.tevolvers.certification.api\/karate\/createBooking\/create[2.1:44] 21:47:35.686-21:47:37.075 Send incorrect parameters to create a booking","className":"failed"},{"id":2,"group":1,"content":"src\/test\/resources\/co.com.tevolvers.certification.api\/karate\/createBooking\/create[2.2:45]","start":1671418057082,"end":1671418057487,"title":"src\/test\/resources\/co.com.tevolvers.certification.api\/karate\/createBooking\/create[2.2:45] 21:47:37.082-21:47:37.487 Send incorrect parameters to create a booking","className":"failed"},{"id":3,"group":1,"content":"src\/test\/resources\/co.com.tevolvers.certification.api\/karate\/createBooking\/create[2.3:49]","start":1671418057493,"end":1671418057849,"title":"src\/test\/resources\/co.com.tevolvers.certification.api\/karate\/createBooking\/create[2.3:49] 21:47:37.493-21:47:37.849 Send incorrect parameters to create a booking","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

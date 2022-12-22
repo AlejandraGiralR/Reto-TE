@@ -1,0 +1,14 @@
+{
+    "categoria": "(//a[@id='itemc'])",
+    "producto": "(//img[@class='card-img-top img-fluid'])",
+    "home":"//a[@id='nava']",
+    "add": "//a[@class='btn btn-success btn-lg']",
+    "precio": "//h3[@class='price-container']",
+    "laptop": "//a[contains(text(),'Laptops')]",
+    "cart":"//a[@id='cartur']",
+    "precioTotal": "//h3[@id='totalp']"
+    
+    
+    
+
+}
