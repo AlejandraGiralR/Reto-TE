@@ -15,31 +15,35 @@ const compras = base.extend<{ Demoblaze: demoblaze }>({
 })
 
 
-
 compras(`@selectPhones: seleccionar producto de la categoria Phones`, async ({ page, Demoblaze }) => {
     await page.pause();
-    const compraPhones = await Demoblaze.selectPhones();
+    const compraPhones = await Demoblaze.selectProduct("[1]", 3);
     expect(compraPhones).not.toBeEmpty
 })
 
 compras(`@SelectLaptops: seleccionar producto de la categoria laptops`, async ({ page, Demoblaze }) => {
     await page.pause();
-    const compraLaptop = await Demoblaze.selectLaptops();
+    const compraLaptop = await Demoblaze.selectProduct("[2]", 3);
     expect(compraLaptop).not.toBeEmpty
 })
 
 compras(`@SelectMonitors: seleccionar producto de la categoria monitors`, async ({ page, Demoblaze }) => {
     await page.pause();
-    const compraMonitors = await Demoblaze.selectMonitors();
+    const compraMonitors = await Demoblaze.selectProduct("[3]", 2);
+    expect(compraMonitors).not.toBeEmpty
+})
+compras(`@SelectProducto: seleccionar producto`, async ({ page, Demoblaze }) => {
+    await page.pause();
+    const compraMonitors = await Demoblaze.selectProduct("[3]", 3);
     expect(compraMonitors).not.toBeEmpty
 })
 
 
 compras(`@ValidarPrecio: validar el precio total de la compra`, async ({ page, Demoblaze }) => {
     await page.pause();
-    const compraPhones = await Demoblaze.selectPhones();
-    const compraLaptop = await Demoblaze.selectLaptops();
-    const compraMonitors = await Demoblaze.selectMonitors();
+    const compraPhones = await Demoblaze.selectProduct("[1]", 3);
+    const compraLaptop = await Demoblaze.selectProduct("[2]", 3);
+    const compraMonitors = await Demoblaze.selectProduct("[3]", 2);
     const total = await Demoblaze.carrito();
     let ValidarPrecio = compraPhones + compraLaptop + compraMonitors;
     console.log('precio total', ValidarPrecio);
@@ -48,5 +52,7 @@ compras(`@ValidarPrecio: validar el precio total de la compra`, async ({ page, D
     expect(parseInt(total)).toBe(ValidarPrecio);
 
 })
+
+
 
 
